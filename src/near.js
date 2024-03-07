@@ -34,14 +34,14 @@ async function main() {
 
 }
 console.log('Before job instantiation');
-const job = new CronJob('*/10 * * * * *', function () {
+const job = new CronJob('*/3 * * * * *', function () {
   try {
     main()
   } catch(err) {
 
   }
 	const d = new Date();
-	console.log('Near JOB Every 10s:', d);
+	console.log('Near JOB Every 3s:', d);
 });
 console.log('After job instantiation');
 job.start();
