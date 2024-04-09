@@ -17,14 +17,14 @@ async function main() {
     }
     console.log("DONE")
 }
-const job = new CronJob('*/3 * * * * *', function () {
+const job = new CronJob('*/1 * * * * *', function () {
     try {
       main()
     } catch (err) {
   
     }
     const d = new Date();
-    console.log('StarkNet Every 3s:', d);
+    console.log('StarkNet Every 1s:', d);
   });
   console.log('After job instantiation');
   job.start();
