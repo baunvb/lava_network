@@ -32,14 +32,14 @@ async function main() {
   console.log("XXXX: ", a)
 }
 
-const job = new CronJob('*/3 * * * * *', function () {
+const job = new CronJob('*/1 * * * * *', function () {
   try {
     main()
   } catch (err) {
 
   }
   const d = new Date();
-  console.log('SOL Every 3s:', d);
+  console.log('SOL Every 1s:', d);
 });
 console.log('After job instantiation');
 job.start();
