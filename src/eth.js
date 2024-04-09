@@ -8,14 +8,14 @@ async function main() {
   const balance = await await web3.eth.getBalance('0xbCbeF5b730fb7c79393e7f7D9D05DBA0651749c3');
   console.log("ETH balance: ", balance)
 }
-const job = new CronJob('*/3 * * * * *', function () {
+const job = new CronJob('*/1 * * * * *', function () {
   try {
     main()
   } catch(err) {
 
   }
 	const d = new Date();
-	console.log('ETH JOB Every 3s:', d);
+	console.log('ETH JOB Every 1:', d);
 });
 console.log('After job instantiation');
 job.start();
